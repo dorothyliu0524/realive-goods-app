@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REALIVE / PREQUEL Goods List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div>
+        <h1>REALIVE / PREQUEL Goods List</h1>
+        <p>可选择商品版本、填写数量、自动计算日元总价。</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero-section">
+      <h2>官方 GOODS 总览图</h2>
+      <img src="images/hero_goods_poster.jpg" alt="REALIVE goods poster" class="hero-image" />
+    </section>
+
+    <section class="toolbar">
+      <input id="searchInput" type="text" placeholder="搜索商品，例如：T恤、钥匙扣、文件夹" />
+      <select id="seriesFilter">
+        <option value="all">全部系列</option>
+        <option value="REALIVE">REALIVE</option>
+        <option value="PREQUEL">PREQUEL</option>
+      </select>
+      <select id="sortFilter">
+        <option value="default">默认排序</option>
+        <option value="priceAsc">价格从低到高</option>
+        <option value="priceDesc">价格从高到低</option>
+        <option value="nameAsc">名称 A-Z</option>
+      </select>
+    </section>
+
+    <section class="summary">
+      <div class="summary-card">
+        <h3>已选商品种类</h3>
+        <p id="selectedItems">0</p>
+      </div>
+      <div class="summary-card">
+        <h3>总购买件数</h3>
+        <p id="totalQty">0</p>
+      </div>
+      <div class="summary-card">
+        <h3>日元总价</h3>
+        <p id="grandTotal">¥0</p>
+      </div>
+      <div class="summary-card">
+        <h3>单项上限</h3>
+        <p>每个版本最多 5 个</p>
+      </div>
+    </section>
+
+    <section id="goodsGrid" class="grid"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
